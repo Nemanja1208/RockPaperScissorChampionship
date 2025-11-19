@@ -12,13 +12,8 @@ import {
   CyclePlayer,
   CounterPlayer,
   AdaptivePlayer,
+  LastPlayerStanding,
 } from './players';
-
-/**
- * STUDENTS: Import your player here and add it to the playerList array below!
- * Example:
- * import { MyPlayer } from './players/MyPlayer';
- */
 
 function App() {
   // Initialize players
@@ -28,11 +23,7 @@ function App() {
     new CyclePlayer(),
     new CounterPlayer(),
     new AdaptivePlayer(),
-    /**
-     * STUDENTS: Add your player instance here!
-     * Example:
-     * new MyPlayer(),
-     */
+    new LastPlayerStanding(),
   ]);
 
   const [tournament, setTournament] = useState<Tournament | null>(null);

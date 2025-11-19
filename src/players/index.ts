@@ -14,3 +14,4 @@ export { AdaptivePlayer } from './AdaptivePlayer';
  * Example:
  * export { MyAwesomePlayer } from './MyAwesomePlayer';
  */
+export { LastPlayerStanding } from './LastPlayerStanding';
