@@ -8,6 +8,7 @@ export { RockPlayer } from './RockPlayer';
 export { CyclePlayer } from './CyclePlayer';
 export { CounterPlayer } from './CounterPlayer';
 export { AdaptivePlayer } from './AdaptivePlayer';
+export { MohannedPlayer } from './MohannedPlayer';
 export { HanansPlayer } from './HanansPlayer';
 export { IsakoDavidPlayer } from './IsakoDavidPlayer';
 export { GabbzPlayer } from './GabbzPlayer';
