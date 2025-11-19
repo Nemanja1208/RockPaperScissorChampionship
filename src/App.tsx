@@ -7,11 +7,6 @@ import { TournamentControls } from "./components/TournamentControls";
 import { PlayerList } from "./components/PlayerList";
 import { CountdownTimer } from "./components/CountdownTimer";
 import {
-  RandomPlayer,
-  RockPlayer,
-  CyclePlayer,
-  CounterPlayer,
-  AdaptivePlayer,
   HanansPlayer,
   MohannedPlayer,
   IsakoDavidPlayer,
@@ -31,12 +26,7 @@ import {
 function App() {
   // Initialize players
   const [players] = useState<Player[]>([
-    new RandomPlayer(),
-    new RockPlayer(),
-    new CyclePlayer(),
-    new CounterPlayer(),
     new AlexanderPlayer(),
-    new AdaptivePlayer(),
     new MohannedPlayer(),
     new HanansPlayer(),
     new IsakoDavidPlayer(),
