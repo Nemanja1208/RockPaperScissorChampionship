@@ -13,6 +13,7 @@ import {
   CounterPlayer,
   AdaptivePlayer,
 } from './players';
+import { MohannedPlayer } from './players/MohannedPlayer';
 
 /**
  * STUDENTS: Import your player here and add it to the playerList array below!
@@ -28,6 +29,7 @@ function App() {
     new CyclePlayer(),
     new CounterPlayer(),
     new AdaptivePlayer(),
+    new MohannedPlayer(),
     /**
      * STUDENTS: Add your player instance here!
      * Example:
