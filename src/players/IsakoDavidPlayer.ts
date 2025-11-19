@@ -18,7 +18,7 @@ export class IsakoDavidPlayer implements Player {
    * @param history - Array of previous matches against THIS specific opponent
    * @returns Your chosen move: 'rock', 'paper', or 'scissors'
    */
-  makeMove(opponentName: string, history: MatchHistory[]): Move {
+  makeMove(_opponentName: string, history: MatchHistory[]): Move {
     const safeHistory = history ?? [];
 
     if (safeHistory.length === 0) {
