@@ -11,6 +11,7 @@ import {
   RockPlayer,
   CyclePlayer,
   CounterPlayer,
+  TomasPlayer,
   AdaptivePlayer,
   HanansPlayer,
   IsakoDavidPlayer,
@@ -41,6 +42,7 @@ function App() {
     new GabbzPlayer(),
     new DorsasPlayer(),
     new RahelPlayer(),
+    new TomasPlayer(),
 
 
 
