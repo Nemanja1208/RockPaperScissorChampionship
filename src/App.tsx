@@ -12,12 +12,14 @@ import {
   CyclePlayer,
   CounterPlayer,
   AdaptivePlayer,
+  HanansPlayer,
   IsakoDavidPlayer,
   GabbzPlayer,
   RahelPlayer,
   AlexanderPlayer,
   DorsasPlayer
 } from "./players";
+
 
 /**
  * STUDENTS: Import your player here and add it to the playerList array below!
@@ -34,10 +36,12 @@ function App() {
     new CounterPlayer(),
     new AlexanderPlayer(),
     new AdaptivePlayer(),
+    new HanansPlayer(),
     new IsakoDavidPlayer(),
     new GabbzPlayer(),
     new DorsasPlayer(),
     new RahelPlayer(),
+
 
 
     /**
