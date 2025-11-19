@@ -9,6 +9,11 @@ export { CyclePlayer } from './CyclePlayer';
 export { CounterPlayer } from './CounterPlayer';
 export { AdaptivePlayer } from './AdaptivePlayer';
 export { MohannedPlayer } from './MohannedPlayer';
+export { HanansPlayer } from './HanansPlayer';
+export { IsakoDavidPlayer } from './IsakoDavidPlayer';
+export { GabbzPlayer } from './GabbzPlayer';
+export { RahelPlayer } from './RahelPlayer';
+export { AlexanderPlayer } from './AlexanderPlayer';
 
 
 /**
@@ -16,3 +21,4 @@ export { MohannedPlayer } from './MohannedPlayer';
  * Example:
  * export { MyAwesomePlayer } from './MyAwesomePlayer';
  */
+export { DorsasPlayer } from './DorsasPlayer';

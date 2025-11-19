@@ -1,19 +1,26 @@
-import { useState, useEffect } from 'react';
-import { Tournament } from './tournament/Tournament';
-import { Player, PlayerStats, Match } from './types/player';
-import { Leaderboard } from './components/Leaderboard';
-import { MatchDisplay } from './components/MatchDisplay';
-import { TournamentControls } from './components/TournamentControls';
-import { PlayerList } from './components/PlayerList';
-import { CountdownTimer } from './components/CountdownTimer';
+import { useState, useEffect } from "react";
+import { Tournament } from "./tournament/Tournament";
+import { Player, PlayerStats, Match } from "./types/player";
+import { Leaderboard } from "./components/Leaderboard";
+import { MatchDisplay } from "./components/MatchDisplay";
+import { TournamentControls } from "./components/TournamentControls";
+import { PlayerList } from "./components/PlayerList";
+import { CountdownTimer } from "./components/CountdownTimer";
 import {
   RandomPlayer,
   RockPlayer,
   CyclePlayer,
   CounterPlayer,
   AdaptivePlayer,
-} from './players';
-import { MohannedPlayer } from './players/MohannedPlayer';
+  HanansPlayer,
+  MohannedPlayer,
+  IsakoDavidPlayer,
+  GabbzPlayer,
+  RahelPlayer,
+  AlexanderPlayer,
+  DorsasPlayer
+} from "./players";
+
 
 /**
  * STUDENTS: Import your player here and add it to the playerList array below!
@@ -28,8 +35,17 @@ function App() {
     new RockPlayer(),
     new CyclePlayer(),
     new CounterPlayer(),
+    new AlexanderPlayer(),
     new AdaptivePlayer(),
     new MohannedPlayer(),
+    new HanansPlayer(),
+    new IsakoDavidPlayer(),
+    new GabbzPlayer(),
+    new DorsasPlayer(),
+    new RahelPlayer(),
+
+
+
     /**
      * STUDENTS: Add your player instance here!
      * Example:
@@ -43,14 +59,13 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
   const [completedMatches, setCompletedMatches] = useState(0);
   const [totalMatches, setTotalMatches] = useState(0);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [showUnauthorizedMessage, setShowUnauthorizedMessage] = useState(false);
   const [targetTime] = useState(() => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(15, 0, 0, 0);
-    return tomorrow;
+    const today = new Date();
+    today.setHours(15, 0, 0, 0);
+    return today;
   });
 
   // Initialize tournament
@@ -63,13 +78,13 @@ function App() {
 
     // Listen to tournament events
     newTournament.addListener((event) => {
-      if (event.type === 'start') {
+      if (event.type === "start") {
         setIsRunning(true);
         setCompletedMatches(0);
         if (event.stats) {
           setLeaderboard(Array.from(event.stats.values()));
         }
-      } else if (event.type === 'match') {
+      } else if (event.type === "match") {
         if (event.match) {
           setCurrentMatch(event.match);
         }
@@ -83,7 +98,7 @@ function App() {
           );
         }
         setCompletedMatches((prev) => prev + 1);
-      } else if (event.type === 'complete') {
+      } else if (event.type === "complete") {
         setIsRunning(false);
         if (event.stats) {
           setLeaderboard(
@@ -113,7 +128,7 @@ function App() {
       }
     } else {
       setShowUnauthorizedMessage(true);
-      setPassword('');
+      setPassword("");
       setTimeout(() => setShowUnauthorizedMessage(false), 3000);
     }
   };
@@ -144,8 +159,14 @@ function App() {
       {/* Background effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-48 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-        <div className="absolute top-1/3 -right-48 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style={{ animationDelay: '4s' }}></div>
+        <div
+          className="absolute top-1/3 -right-48 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute -bottom-32 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"
+          style={{ animationDelay: "4s" }}
+        ></div>
       </div>
 
       {/* Main content */}
@@ -155,9 +176,7 @@ function App() {
           <h1 className="rounded-xl text-6xl font-bold mb-4 p-4 text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text animate-glow">
             🪨📄✂️ Rock Paper Scissors Tournament
           </h1>
-          <p className="text-xl text-gray-300">
-            Nemo Sensei Battle Arena
-          </p>
+          <p className="text-xl text-gray-300">Nemo Sensei Battle Arena</p>
         </header>
 
         {/* Main grid */}
@@ -194,7 +213,11 @@ function App() {
                           No No No!
                         </div>
                         <div className="text-gray-300">
-                          Only <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-bold">Nemo Sensei</span> can start the tournament
+                          Only{" "}
+                          <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-bold">
+                            Nemo Sensei
+                          </span>{" "}
+                          can start the tournament
                         </div>
                         <div className="text-sm text-gray-400 mt-2">
                           You can run it locally if you want...
