@@ -11,9 +11,15 @@ export { AdaptivePlayer } from './AdaptivePlayer';
 export { TomasPlayer } from './TomasPlayer';
 
 
+export { IsakoDavidPlayer } from './IsakoDavidPlayer';
+export { GabbzPlayer } from './GabbzPlayer';
+export { RahelPlayer } from './RahelPlayer';
+
+export { AlexanderPlayer } from './AlexanderPlayer';
 
 /**
  * STUDENTS: Import and add your player class here!
  * Example:
  * export { MyAwesomePlayer } from './MyAwesomePlayer';
  */
+export { DorsasPlayer } from './DorsasPlayer';
