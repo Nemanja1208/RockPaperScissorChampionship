@@ -7,6 +7,7 @@ import { TournamentControls } from "./components/TournamentControls";
 import { PlayerList } from "./components/PlayerList";
 import { CountdownTimer } from "./components/CountdownTimer";
 import {
+  LastPlayerStanding,
   HanansPlayer,
   MohannedPlayer,
   IsakoDavidPlayer,
@@ -17,15 +18,10 @@ import {
 } from "./players";
 
 
-/**
- * STUDENTS: Import your player here and add it to the playerList array below!
- * Example:
- * import { MyPlayer } from './players/MyPlayer';
- */
-
 function App() {
   // Initialize players
   const [players] = useState<Player[]>([
+    new LastPlayerStanding(),
     new AlexanderPlayer(),
     new MohannedPlayer(),
     new HanansPlayer(),
