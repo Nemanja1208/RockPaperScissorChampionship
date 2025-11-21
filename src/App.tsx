@@ -14,7 +14,9 @@ import {
   GabbzPlayer,
   RahelPlayer,
   AlexanderPlayer,
-  DorsasPlayer
+  DorsasPlayer,
+  KlasUnbeatable
+
 } from "./players";
 
 
@@ -29,7 +31,7 @@ function App() {
     new GabbzPlayer(),
     new DorsasPlayer(),
     new RahelPlayer(),
-
+    new KlasUnbeatable(),
 
 
     /**

@@ -14,6 +14,7 @@ export { IsakoDavidPlayer } from './IsakoDavidPlayer';
 export { GabbzPlayer } from './GabbzPlayer';
 export { RahelPlayer } from './RahelPlayer';
 export { AlexanderPlayer } from './AlexanderPlayer';
+export { KlasUnbeatable } from './KlasUnbeatable';
 
 
 /**
